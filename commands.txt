@@ -1,0 +1,8 @@
+## Set PROJECT_ID and BUCKET env vars
+### Custom subnet:
+mvn compile exec:java -Dexec.mainClass=com.example.DebuggingWordCount -Dexec.args="--project=$PROJECT_ID \
+      --stagingLocation=gs://$BUCKET/staging/ \
+      --output=gs://$BUCKET/output \
+      --subnetwork=regions/us-central1/subnetworks/us-central1-peer-subnet --runner=DataflowRunner"
+
+
